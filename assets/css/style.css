@@ -1,0 +1,10 @@
+@import url("../fonts/Inter-VariableFont_slnt\,wght.ttf");
+
+html, body {
+    font-family: 'Inter', sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+
+    margin: 0;
+    padding: 0;
+}
