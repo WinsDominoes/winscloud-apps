@@ -1,13 +1,42 @@
 @import url("../fonts/Inter-VariableFont_slnt\,wght.ttf");
 
+:root {
+    color-scheme: light dark;
+
+    --light-bg: #fafafa;
+    --light-color: rgba(0, 0, 0, 0.8);
+
+    --dark-bg: #242424;
+    --dark-color: #ffffff;
+}
+
+* {
+    background-color: light-dark(var(--light-bg), var(--dark-bg));
+    color: light-dark(var(--light-color), var(--dark-color));
+}
+
 html, body {
     font-family: 'Inter', sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
-
+    
     margin: 0;
     padding: 0;
+}
 
-    background-color: #242424;
-    color: #ffffff;
+h1, h2, h3, h4, h5 {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.light {
+    color-scheme: light;
+}
+
+.dark {
+    color-scheme: dark;
 }
