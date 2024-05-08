@@ -174,3 +174,8 @@ header {
         padding: 5px;
     }
 }
+
+.container {
+    margin: 0 calc(8px + 1.5625vw);
+    padding: 10px;
+}
