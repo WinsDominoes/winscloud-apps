@@ -98,12 +98,14 @@ header {
     cursor: pointer;
 }
 
-.nav > .nav-list > a:hover {
-    background-color: light-dark(rgba(0, 0, 0, 0.1),hsla(0,0%,100%,.05));
-}
-
 .nav > .nav-list > a > li {
     list-style-type: none;
+}
+
+.nav > .nav-list > a > li:hover {
+    background-color: light-dark(rgba(0, 0, 0, 0.1),hsla(0,0%,100%,.05));
+    padding: 0.5rem 0.75rem 0.5rem 0.75rem;
+    border-radius: 7px;
 }
 
 .nav > #nav-check {
