@@ -11,6 +11,9 @@
     --light-nav-backdrop-color: #fafafa;
     --light-nav-shade-color: rgba(0, 0, 0, 0.12);
     --light-nav-darker-shade-color: rgba(0, 0, 0, 0.12);
+    --light-card-bg-color: #ffffff;
+    --light-card-fg-color: rgba(0, 0, 0, 0.8);
+    --light-card-shade-color: rgba(0, 0, 0, 0.07);
 
     --dark-bg: #242424;
     --dark-fg-color: #ffffff;
@@ -19,7 +22,10 @@
     --dark-nav-border-color: #ffffff;
     --dark-nav-backdrop-color: #242424;
     --dark-nav-shade-color: rgba(0, 0, 0, 0.36);
-    --dark-nav-darker-shade-color: rgba(0, 0, 0, 0.9);  
+    --dark-nav-darker-shade-color: rgba(0, 0, 0, 0.9);
+    --dark-card-bg-color: rgba(255, 255, 255, 0.08);
+    --dark-card-fg-color: #ffffff;
+    --dark-card-shade-color: rgba(0, 0, 0, 0.36);
 }
 
 @font-face {
@@ -45,7 +51,7 @@ html, body {
     box-sizing: border-box;
 }
 
-h1, h2, h3, h4, h5 {
+h1, h2, h3, h4, h5, h6, p {
     margin: 0;
     padding: 0;
 }
@@ -65,6 +71,10 @@ header {
 
 .dark {
     color-scheme: dark;
+}
+
+.text-bold {
+    font-weight: 600;
 }
 
 .nav {
@@ -196,9 +206,52 @@ header {
 }
 
 .main-banner h1 {
-    font-size: calc(50px + .5vw);
+    font-size: calc(45px + .5vw);
 }
 
 .main-banner p {
     font-size: calc(12px + .5vw);
+}
+
+.main-apps {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-items: center;
+}
+
+.main-apps > #heading {
+    margin: 2rem 0 1rem 0;
+}
+
+.app-grid {
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.app-grid__item {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+    text-align: start;
+
+    padding-block: .5rem;
+    padding-inline: .5rem 1rem;
+    max-width: fit-content;
+    cursor: pointer;
+    
+    color: light-dark(var(--light-card-fg-color), var(--dark-card-fg-color));
+    background-color: light-dark(var(--light-card-bg-color), var(--dark-card-bg-color));
+    box-shadow: 1px 1px 5px 0 light-dark(var(--light-card-shade-color), var(--dark-card-shade-color));
+    text-decoration: none;
+
+    border-radius: 1rem;
+}
+
+.app-grid__item > img {
+    max-width: 100%;
+    height: 128px;
 }
