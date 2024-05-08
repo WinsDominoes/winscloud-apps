@@ -157,7 +157,7 @@ header {
     }
 
     .nav > .nav-list > li:hover {
-        background-color: light-dark(hsla(0,0%,100%,.05), rgba(0,0,0,.05));
+        background-color: light-dark(rgba(0, 0, 0, 0.1),hsla(0,0%,100%,.05));
     }
 
     .nav > #nav-check:checked ~ .nav-list {
