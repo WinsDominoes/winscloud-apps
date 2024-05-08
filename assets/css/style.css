@@ -93,13 +93,17 @@ header {
     padding-left: 0;
 }
 
-.nav > .nav-list > li {
-    list-style-type: none;
-}
-
-.nav > .nav-list > li a {
+.nav > .nav-list > a {
     text-decoration: none;
     cursor: pointer;
+}
+
+.nav > .nav-list > a:hover {
+    background-color: light-dark(rgba(0, 0, 0, 0.1),hsla(0,0%,100%,.05));
+}
+
+.nav > .nav-list > a > li {
+    list-style-type: none;
 }
 
 .nav > #nav-check {
@@ -150,13 +154,13 @@ header {
         background-color: light-dark(var(--light-nav-bg-color), var(--dark-nav-bg-color));
     }
 
-    .nav > .nav-list > li {
+    .nav > .nav-list > a > li {
         padding: 0.5rem 0.75rem 0.5rem 0.75rem;
         margin-bottom: 0.35rem;
         border-radius: 7px;
     }
 
-    .nav > .nav-list > li:hover {
+    .nav > .nav-list > a > li:hover {
         background-color: light-dark(rgba(0, 0, 0, 0.1),hsla(0,0%,100%,.05));
     }
 
