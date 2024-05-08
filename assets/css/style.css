@@ -176,6 +176,29 @@ header {
 }
 
 .container {
-    margin: 0 calc(8px + 1.5625vw);
+    margin:  10px calc(10px + 1.5625vw);
     padding: 10px;
+}
+
+.main-banner {
+    height: 300px;
+    border-radius: 0.75rem;
+    background-color: #2ec27e;
+    box-shadow: 1px 1px 4px 0 light-dark(var(--light-nav-shade-color), var(--dark-nav-shade-color));
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    padding: 10px; 
+}
+
+.main-banner h1 {
+    font-size: calc(50px + .5vw);
+}
+
+.main-banner p {
+    font-size: calc(12px + .5vw);
 }
