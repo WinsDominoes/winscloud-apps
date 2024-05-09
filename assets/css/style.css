@@ -13,9 +13,9 @@
     --light-nav-darker-shade-color: rgba(0, 0, 0, 0.12);
     --light-card-bg-color: #ffffff;
     --light-card-fg-color: rgba(0, 0, 0, 0.8);
-    --light-card-shade-color: rgba(0, 0, 0, 0.07);
+    --light-card-shade-color: rgba(0, 0, 0, 0.20);
 
-    --dark-bg: #242424;
+    --dark-bg-color: #242424;
     --dark-fg-color: #ffffff;
     --dark-nav-bg-color: #303030;
     --dark-nav-fg-color: #ffffff;
@@ -34,7 +34,6 @@
 }
 
 * {
-    background-color: light-dark(var(--light-bg-color), var(--dark-bg-color));
     color: light-dark(var(--light-fg-color), var(--dark-fg-color));
 }
 
@@ -49,6 +48,8 @@ html, body {
     padding: 0;
 
     box-sizing: border-box;
+
+    background-color: light-dark(var(--light-bg-color), var(--dark-bg-color));
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -81,6 +82,7 @@ header {
     width: 100%;
     height: 50px;
     display: flex;
+    background-color: light-dark(var(--light-bg-color), var(--dark-bg-color));
     box-shadow: 1px 1px 4px 0 light-dark(var(--light-nav-shade-color), var(--dark-nav-shade-color));
     align-items: center;
 }
@@ -145,6 +147,7 @@ header {
     align-items: center;
     justify-content: center;
     text-align: center;
+    row-gap: 1rem;
 
     padding: 10px; 
 }
@@ -165,7 +168,7 @@ header {
 }
 
 .main-apps > #heading {
-    margin: 2rem 0 2rem 0;
+    margin: 2rem 0 1rem 0;
 }
 
 .app-grid {
@@ -221,6 +224,25 @@ header {
     max-width: 100%;
     height: 96px;
     border-radius: 0.75rem;
+}
+
+footer {
+    background-color: light-dark(var(--light-card-bg-color), var(--dark-card-bg-color));
+    text-align: center;
+    margin-top: 1rem;
+    padding: 1rem 0;
+}
+
+footer > .info {
+    display: flex;
+}
+
+footer > .info a:hover {
+    text-decoration: underline;
+}
+
+footer > .info > span {
+    flex: auto;
 }
 
 /* Screens smaller than 480 pixels */
@@ -299,5 +321,11 @@ header {
     .app-grid__item > img {
         max-width: 100%;
         height: 64px;
+    }
+
+    footer > .info {
+        display: flex;
+        flex-direction: column;
+        row-gap: 0.5rem;
     }
 }
